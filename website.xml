@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website>
+    <info>
+        <name>How Long To Memorize X Pages?</name>
+        <url>http://localhost:3000</url>
+        <description>A simple website to estimate the time required to memorize a given number of pages.</description>
+    </info>
+    <body>
+        <logo>logo.png</logo>
+        <prompt>
+            <title>How Long To Memorize A Page?</title>
+            <input>Time: </input>
+            <optional>
+                <title>How Long To Memorize A Half-Page?</title>
+                <input>Time: </input>
+            </optional>
+        </prompt>
+        <hr>
+        <prompt>
+            <title>Number of Pages to Memorize:</title>
+            <input>Pages: </input>
+            <optional>
+                <title>Number of Half-Pages to Memorize:</title>
+                <input>Half-Pages: </input>
+            </optional>
+        </prompt>
+        <hr>
+        <result>
+            <title>Total Estimated Time to Memorize:</title>
+            <output>Time: </output>
+        </result>
+        <script>
+            // Code to calculate estimated time based on user inputs
+
+            get pageTime from first prompt || if half-page time provided then pageTime = halfPageTime * 2
+            get numberOfPages from second prompt || if half-pages provided then numberOfPages = halfPages / 2
+
+            totalTime = pageTime * numberOfPages
+        </script>
+    </body>
+</website>
